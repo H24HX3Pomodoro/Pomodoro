@@ -11,6 +11,7 @@ void draw() {
  if(p!= null ){
   p.calcTime();
   p.displayTime();
+  p.displayPomodoro();
  }
 }
 
