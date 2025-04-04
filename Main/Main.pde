@@ -11,7 +11,7 @@ void setup() {
 }
 
 void draw() {
-  background(255);
+  background(246,244,210);
 
   p.calcTime();
   p.displayTime();

@@ -1,6 +1,6 @@
 class Pomodoro {
-  int sek = 5;
-  int min = 0;
+  int sek = 0;
+  int min = 25;
   int startFrame = 0;
   int cycle = 0;
   boolean isBreak = false;
@@ -45,9 +45,9 @@ class Pomodoro {
   }
 
   void displayCircle() {
-    fill(255, 0, 0);
+    fill(164, 74, 63);
     noStroke();
-    ellipse(width / 2, height / 2, width * 0.6, width * 0.6);
+    ellipse(width / 2, height / 2, width * 0.8, width * 0.8);
   }
 
   void toggleTimer(boolean state) {
