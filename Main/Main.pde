@@ -7,7 +7,7 @@ void setup() {
   textSize(50);
 
   p = new Pomodoro();
-  startStopButton = new Button(width / 2, height / 2, width * 0.3, "Start");
+ startStopButton = new Button(width / 2, height / 2, width*0.8);
 }
 
 void draw() {
@@ -18,13 +18,12 @@ void draw() {
   p.displayCycle();
   p.displayCircle();
 
-  startStopButton.display();
+  startStopButton.display(isRunning);
 }
 
 void mousePressed() {
   if (startStopButton.isClicked(mouseX, mouseY)) {
     isRunning = !isRunning;
-    startStopButton.setText(isRunning ? "Stop" : "Start");
     p.toggleTimer(isRunning);
   }
 }

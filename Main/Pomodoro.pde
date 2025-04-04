@@ -34,7 +34,7 @@ class Pomodoro {
   }
 
   void displayTime() {
-    fill(0);
+    fill(164, 74, 63);
     textAlign(CENTER, CENTER);
     text(min + ":" + nf(sek, 2), width / 2, height / 4);
   }
@@ -47,7 +47,7 @@ class Pomodoro {
   void displayCircle() {
     fill(164, 74, 63);
     noStroke();
-    ellipse(width / 2, height / 2, width * 0.8, width * 0.8);
+    circle(width / 2, height / 2, width * 0.8);
   }
 
   void toggleTimer(boolean state) {

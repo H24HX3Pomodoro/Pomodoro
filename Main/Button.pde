@@ -1,31 +1,34 @@
 class Button {
-  float x, y, size;
-  String label;
-
-  Button(float x, float y, float size, String label) {
+   float x, y, size;
+  
+  Button(float x, float y, float size) {
     this.x = x;
     this.y = y;
     this.size = size;
-    this.label = label;
   }
-
-  void display() {
-    fill(255);
-    stroke(0);
-    strokeWeight(5);
-    ellipse(x, y, size, size);
-
-    fill(0);
-    textAlign(CENTER, CENTER);
-    textSize(40);
-    text(label, x, y);
+  
+  void display(boolean isRunning) {
+    fill(164, 74, 63);
+    noStroke();
+    circle(x, y, size);
+    
+    fill(212,224,155);
+    noStroke();
+    
+    if (!isRunning) {
+      // Tegn trekant
+      float tSize = size * 0.4;
+      triangle(x - tSize / 2, y - tSize / 2, x - tSize / 2, y + tSize / 2, x + tSize / 2, y);
+    } else {
+      // Tegn to linjer
+      float barW = size * 0.15;
+      float barH = size * 0.5;
+      rect(x - barW * 1.5, y - barH / 2, barW, barH);
+      rect(x + barW * 0.5, y - barH / 2, barW, barH);
+    }
   }
 
   boolean isClicked(float mx, float my) {
     return dist(mx, my, x, y) < size / 2;
-  }
-
-  void setText(String newText) {
-    label = newText;
   }
 }
