@@ -1,13 +1,10 @@
-import ddf.minim.*;
+import cassette.audiofiles.SoundFile;
 
 Pomodoro p;
 Button startStopButton;
 StudyTime studyTime;
 boolean isRunning = false;
-Minim noise;
-Minim bird;
-AudioPlayer one;
-AudioPlayer two;
+SoundFile noise;
 
 void setup() {
   fullScreen();
@@ -16,10 +13,7 @@ void setup() {
   p = new Pomodoro();
   startStopButton = new Button(width / 2, height / 2, width * 0.8);
   studyTime = new StudyTime();
-  noise = new Minim(this);
-  bird = new Minim(this);
-  one = noise.loadFile("WN.mp3");
-  two = bird.loadFile("bird.mp3");
+  noise = new SoundFile(this, "WN.mp3");
 }
 
 void draw() {
@@ -40,12 +34,9 @@ void mousePressed() {
     p.toggleTimer(isRunning);
   }
   if (isRunning) {
-    // Timer starts - play white noise
-    one.play();  // Loop the noise sound
-    two.pause();   // Stop the bird sound
+    noise.loop();
+    
   } else {
-    // Timer stops - stop white noise and play bird sound
-    one.pause();  // Stop the noise
-    two.loop();   // Start bird sound when paused
+    noise.stop();
   }
 }
