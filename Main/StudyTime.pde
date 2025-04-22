@@ -1,5 +1,5 @@
 class StudyTime {
-  int displayedCycles = 4;
+  int displayedCycles = 0;
 
   void update(int pomodoroCycle) {
     displayedCycles = pomodoroCycle;

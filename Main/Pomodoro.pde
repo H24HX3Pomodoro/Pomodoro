@@ -1,7 +1,7 @@
 class Pomodoro {
   int totalSeconds = 25 * 60;
   int secondsLeft = totalSeconds;
-  int cycle = 4;
+  int cycle = 0;
   boolean isBreak = false;
   boolean isRunning = false;
   int startTime = 0;
