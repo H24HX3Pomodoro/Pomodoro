@@ -1,0 +1,1 @@
+Appen restarter efter noget tid hvis ikke hele tiden efterladt tændt(Har ingen idé hvorfor det sker) det anbefales at enten ændre cyklusser til 3 eller have den tændt hele tiden.
