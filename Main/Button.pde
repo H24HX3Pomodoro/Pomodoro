@@ -16,11 +16,11 @@ class Button {
     noStroke();
 
     if (!isRunning) {
-      // Play-ikon
+      // Play-ikon 
       float tSize = size * 0.4;
       triangle(x - tSize / 2, y - tSize / 2, x - tSize / 2, y + tSize / 2, x + tSize / 2, y);
     } else {
-      // Pause-ikon
+      // Pause-ikon (Ref. til ChatGPT)
       float barW = size * 0.15;
       float barH = size * 0.5;
       rect(x - barW * 1.5, y - barH / 2, barW, barH);

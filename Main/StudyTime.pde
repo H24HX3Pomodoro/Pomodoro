@@ -14,6 +14,7 @@ class StudyTime {
     fill(164, 74, 63);
     noStroke();
 
+    //(Ref. til ChatGPT)
     for (int i = 0; i < displayedCycles; i++) {
       int row = i / perRow;
       int col = i % perRow;
